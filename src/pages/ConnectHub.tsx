@@ -13,7 +13,7 @@ function ConnectHub() {
   const [telefone, atualizarTelefone] = useState("");
   const [lista, atualizarLista] = useState<string[]>([]);
 
-  // 🔹 carregar contatos ao abrir
+
   useEffect(() => {
     const contatosSalvos = localStorage.getItem("contatos");
     if (contatosSalvos) {
@@ -21,7 +21,7 @@ function ConnectHub() {
     }
   }, []);
 
-  // 🔹 salvar contatos sempre que lista mudar
+
   useEffect(() => {
     localStorage.setItem("contatos", JSON.stringify(lista));
   }, [lista]);
